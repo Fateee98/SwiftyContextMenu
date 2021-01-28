@@ -34,7 +34,7 @@ class IntensityVisualEffectView: UIVisualEffectView {
     }
     
     private func apply(intensity: CGFloat) {
-        animator = UIViewPropertyAnimator(duration: 1, curve: .linear) { [unowned self] in self.effect = _effect }
+        animator = UIViewPropertyAnimator(duration: 1, curve: .linear) { [unowned self] in self.effect = self._effect }
         animator.fractionComplete = intensity
     }
     
